@@ -1,0 +1,25 @@
+@import './mixins';
+@import './fonts';
+@import './vars';
+
+@import './logo';
+@import './header';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  .font(@family: "futura", @size: 10px, @weight: 500);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
