@@ -1,0 +1,38 @@
+.detox-info {
+  width: 81%;
+  margin: 0 auto;
+
+  &__title {
+    .font(@size: 4.3rem, @weight: 500);
+    letter-spacing: 1px;
+  }
+
+  &__text {
+    .font(@family: "Futura PT Book", @size: 1.9rem, @weight: 300);
+    letter-spacing: 0;
+    line-height: 1.2em;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+
+  &__subtitle {
+    .font(@family: "Futura", @size: 2.3rem, @weight: 900);
+    padding-top: 3.5rem;
+    letter-spacing: 1px;
+  }
+
+  ul {
+    list-style: circle;
+    letter-spacing: -1px;
+    margin-left: 1.8rem;
+    margin-top: 0.9em;
+    .font(@family: "Futura PT Book", @size: 2rem, @weight: 300);
+
+    > li {
+      letter-spacing: 0;
+      &:not(:first-child) {
+        margin-top: 0.18rem;
+      }
+    }
+  }
+}

@@ -9,6 +9,306 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-@@include('./views/_header.html')
+<div>
+    <input type='checkbox' id='checkbox-menu'/>
+    <header class="header">
+        <label for='checkbox-menu'>
+            <img src="./img/menu.svg" alt="menu" id="menu-common-icon">
+            <img src="./img/close.svg" alt="close" id="menu-white-icon">
+        </label>
+        <div class="logo header__logo">
+            <img src="./img/logo-common.svg" alt="logo" id="logo-common-icon">
+            <img src="./img/logo-white.svg" alt="logo" id="logo-white-icon">
+            <div class="logo__inner">
+                <div class="logo__title">Очищение</div>
+                <div class="logo__subtitle">детоксикация при любых видах зависимости</div>
+            </div>
+        </div>
+        <nav>
+            <ul class="header__items">
+                <li class="header__search">
+                    <input type="text" placeholder="Поиск по сайту...">
+                </li>
+                <li><a href="#">Клиники</a></li>
+                <li><a href="#">Наркомания</a></li>
+                <li><a href="#">Алкоголизм</a></li>
+                <li><a href="#">Подросткам</a></li>
+                <li><a href="#">Публикации</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><img src="./img/search.svg" alt="search"><span>Поиск</span></li>
+            </ul>
+        </nav>
+        <img src="./img/phone.svg" alt="phone" id="phone-icon">
+        <div class="header__contacts">
+            <div class="header__contacts-number">8 (800) 636-54-12</div>
+            <div class="header__contacts-description">Круглосуточно, анонимно</div>
+        </div>
+    </header>
+    <img src="./img/cloud.png" alt="cloud" class="cloud">
+    <img src="./img/cloud-mob.png" alt="cloud" class="cloud-mob">
+    <div class="container">
+        <section class="header-section">
+            <div class="header-section__block">
+                <div class="header-section__block-subtitle">Гарантия анонимности</div>
+                <div class="header-section__block-title">Наркологические клиники</div>
+                <div class="header-section__block-description">Клиники по всей России, бесплатная консультация врача,
+                    круглосуточная помощь!
+                </div>
+                <div class="btn-green header-section__block-btn">Оставить заявку</div>
+            </div>
+        </section>
+        <section class="list">
+            <div class="list__header">
+                <div class="list__subtitle">Начните лечение уже сегодня!</div>
+                <div class="list__title">Каталог клиник</div>
+                <div class="choice list__choice">Выберите регион</div>
+            </div>
+            <img src="./img/map.png" alt="map" class="list__map">
+            <div class="list__items">
+                <div class="list__item">
+                    <div class="list__item-type">
+                        <img src="./img/star.svg" alt="star">
+                        <span>Комфорт</span>
+                    </div>
+                    <img src="./img/clinic-moscow1.png" alt="">
+                    <div class="list__item-inner">
+                        <div class="list__item-city">г. Москва</div>
+                        <div class="list__item-address">ул. Большая Академическая, 13А</div>
+                        <div class="list__item-price"><strong>от 3000 ₽</strong><span>/ в сутки</span></div>
+                    </div>
+                </div>
+                <div class="list__item">
+                    <div class="list__item-type">
+                        <img src="./img/star.svg" alt="star">
+                        <span>Стандарт</span>
+                    </div>
+                    <img src="./img/clinic-ecaterinburg.png" alt="">
+                    <div class="list__item-inner">
+                        <div class="list__item-city">г. Екатеринбург</div>
+                        <div class="list__item-address">ул. Большая Академическая, 13А</div>
+                        <div class="list__item-price"><strong>от 3000 ₽</strong><span>/ в сутки</span></div>
+                    </div>
+                </div>
+                <div class="list__item">
+                    <div class="list__item-type">
+                        <img src="./img/star.svg" alt="star">
+                        <span>VIP</span>
+                    </div>
+                    <img src="./img/clinic-saint-petersburg.png" alt="">
+                    <div class="list__item-inner">
+                        <div class="list__item-city">г. Санкт-Петербург</div>
+                        <div class="list__item-address">ул. Большая Академическая, 13А</div>
+                        <div class="list__item-price"><strong>от 3000 ₽</strong><span>/ в сутки</span></div>
+                    </div>
+                </div>
+                <div class="list__item">
+                    <div class="list__item-type">
+                        <img src="./img/star.svg" alt="star">
+                        <span>Комфорт</span>
+                    </div>
+                    <img src="./img/clinic-moscow2.png" alt="">
+                    <div class="list__item-inner">
+                        <div class="list__item-city">г. Москва</div>
+                        <div class="list__item-address">ул. Большая Академическая, 13А</div>
+                        <div class="list__item-price"><strong>от 3000 ₽</strong><span>/ в сутки</span></div>
+                    </div>
+                </div>
+                <div class="list__item">
+                    <div class="list__item-type">
+                        <img src="./img/star.svg" alt="star">
+                        <span>Комфорт</span>
+                    </div>
+                    <img src="./img/clinic-moscow1.png" alt="">
+                    <div class="list__item-inner">
+                        <div class="list__item-city">г. Москва</div>
+                        <div class="list__item-address">ул. Большая Академическая, 13А</div>
+                        <div class="list__item-price"><strong>от 3000 ₽</strong><span>/ в сутки</span></div>
+                    </div>
+                </div>
+                <div class="list__item">
+                    <div class="list__item-type">
+                        <img src="./img/star.svg" alt="star">
+                        <span>Стандарт</span>
+                    </div>
+                    <img src="./img/clinic-ecaterinburg.png" alt="">
+                    <div class="list__item-inner">
+                        <div class="list__item-city">г. Екатеринбург</div>
+                        <div class="list__item-address">ул. Большая Академическая, 13А</div>
+                        <div class="list__item-price"><strong>от 3000 ₽</strong><span>/ в сутки</span></div>
+                    </div>
+                </div>
+                <div class="list__item">
+                    <div class="list__item-type">
+                        <img src="./img/star.svg" alt="star">
+                        <span>VIP</span>
+                    </div>
+                    <img src="./img/clinic-saint-petersburg.png" alt="">
+                    <div class="list__item-inner">
+                        <div class="list__item-city">г. Санкт-Петербург</div>
+                        <div class="list__item-address">ул. Большая Академическая, 13А</div>
+                        <div class="list__item-price"><strong>от 3000 ₽</strong><span>/ в сутки</span></div>
+                    </div>
+                </div>
+                <div class="list__item">
+                    <div class="list__item-type">
+                        <img src="./img/star.svg" alt="star">
+                        <span>Комфорт</span>
+                    </div>
+                    <img src="./img/clinic-moscow2.png" alt="">
+                    <div class="list__item-inner">
+                        <div class="list__item-city">г. Москва</div>
+                        <div class="list__item-address">ул. Большая Академическая, 13А</div>
+                        <div class="list__item-price"><strong>от 3000 ₽</strong><span>/ в сутки</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination list__pagination">
+                <div class="pagination__left-arrow"><img src="./img/left-arrow.svg" alt="arrow"></div>
+                <div class="pagination__nums">
+                    <div class="pagination__num">1</div>
+                    <div class="pagination__num">2</div>
+                    <div class="pagination__num">3</div>
+                    <div class="pagination__num">4</div>
+                    <div class="pagination__num">...</div>
+                    <div class="pagination__num">15</div>
+                </div>
+                <div class="pagination__right-arrow"><img src="./img/right-arrow.svg" alt="arrow"></div>
+            </div>
+        </section>
+        <section class="about-block">
+            <img src="./img/about.png" alt="about">
+            <div class="about-block__info">
+                <div class="about-block__subtitle">Анонимно и бесплатно</div>
+                <div class="about-block__title">Поможем выбрать клинику по соотношению цены, качества и комфорта</div>
+                <div class="about-block__description">Выбирая клинику, вы выбираете врачей, которым готовы доверить
+                    судьбу
+                    своего близкого. Мы поможем вам в этом решении!
+                </div>
+                <div class="btn-green about-block__btn">Оставить заявку</div>
+            </div>
+        </section>
+        <section class="price-block">
+            <div class="price-block__subtitle">Размещение в клинике</div>
+            <div class="price-block__title">Стоимость детоксикации</div>
+            <div class="price-block__cards">
+                <div class="price-block__card">
+                    <div class="price-block__card-title">Палата эконом</div>
+                    <div class="price-block__card-price">5 000</div>
+                    <div class="price-block__card-reg">в сутки</div>
+                    <div class="price-block__card-description">
+                        <span>4х разовое питание</span>
+                        <span>3-6 мест в палате</span>
+                        <span>2 капельницы в день</span>
+                    </div>
+                </div>
+                <div class="price-block__card">
+                    <div class="price-block__card-title">Палата комфорт</div>
+                    <div class="price-block__card-price">8 000</div>
+                    <div class="price-block__card-reg">в сутки</div>
+                    <div class="price-block__card-description">
+                        <span>4х разовое питание</span>
+                        <span>двухместная палата</span>
+                        <span>2 капельницы в день</span>
+                    </div>
+                </div>
+                <div class="price-block__card">
+                    <div class="price-block__card-title">Палата VIP</div>
+                    <div class="price-block__card-price">14 000</div>
+                    <div class="price-block__card-reg">в сутки</div>
+                    <div class="price-block__card-description">
+                        <span>5ти разовое питание</span>
+                        <span>одноместная палата</span>
+                        <span>2 капельницы в день</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="detox-info">
+            <div class="detox-info__title">
+                Детоксикация организма в клинике
+            </div>
+            <div class="detox-info__text">Важно помнить, что детоксикация наркозависимого – первый шаг. Родственники
+                больного должны знать, что после
+                проведения медицинских манипуляций, когда организм зависимого полностью очищен, его тяга к наркотикам
+                усиливается в разы. Поэтому после детокса сразу отправить наркомана на лечение, для того чтобы следующая
+                доза не стала для него губительной. Детоксикация при наркомании возможна как в домашних условиях, так и
+                в
+                стационаре. При сильной передозировке, бригада специалистов может выехать на дом к больному и там
+                провести
+                необходимые инъекции. Однако, детоксикация организма зависимого в стационаре дает лучшие результаты.
+            </div>
+            <div class="detox-info__subtitle">
+                Последовательность очищения организма
+            </div>
+            <ul>
+                <li>в первую очередь необходимо позвонить в клинику,</li>
+                <li>ознакомление нарколога с историей болезни человека и его состоянием,</li>
+                <li>назначение и применение специальных медикаментозных препаратов,</li>
+                <li>назначение лекарств для общего укрепления и успокоения психики.</li>
+            </ul>
+            <div class="detox-info__subtitle">
+                Всем ли помогает детоксикация
+            </div>
+            <div class="detox-info__text">Детоксикация наркозависимого – действенный метод очистки организма, который
+                применяется в рамках лечения
+                наркомании. Метод эффективен как для устранения последствий превышения дозы наркотиков, так и для полной
+                очистки от психотропных веществ. Но не стоит надеяться, что детоксикация от наркотиков избавит близкого
+                человека от зависимости. Даже если на следующий день после детокса, наркоман обещает больше не
+                употреблять
+                наркотики и радуется своему хорошему самочувствию – это большая ложь. Через несколько часов
+                восторженного
+                состояния, наркоман побежит за новой порцией дурмана и опять начнет губить свой организм. Поэтому, если
+                наркоман сам или по принуждению прошел детокс, важно немедленно направить его на лечение. Только полный
+                курс
+                психологической
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__request">
+                <div class="footer__request-text">
+                    <div>Оставьте заявку прямо сейчас!</div>
+                    <div>Мы на связи 24/7, бесплатная горячая линия</div>
+                </div>
+                <div class="btn-green">Оставить заявку</div>
+                <div class="footer__request-social">
+                    <div><img src="./img/viber.svg" alt=""></div>
+                    <div><img src="./img/whatsapp.svg" alt=""></div>
+                    <div><img src="./img/telegram.svg" alt=""></div>
+                </div>
+            </div>
+            <div class="footer__info">
+                <div class="footer__info-column">
+                    <div class="footer__info-title"><img src="./img/logo-d.svg" alt="logo-d"><span>Logo</span></div>
+                    <div class="footer__info-item">Детоксикация алкозависимых и наркозависимых</div>
+                </div>
+                <div class="footer__info-column">
+                    <div class="footer__info-title">Услуги</div>
+                    <div class="footer__info-item">Лечение наркомании</div>
+                    <div class="footer__info-item">Лечение алкоголизма</div>
+                    <div class="footer__info-item">УБОД</div>
+                </div>
+                <div class="footer__info-column">
+                    <div class="footer__info-title">Информация</div>
+                    <div class="footer__info-item">Клиники</div>
+                    <div class="footer__info-item">Подросткам</div>
+                    <div class="footer__info-item">Онлайн консультация</div>
+                </div>
+                <div class="footer__info-column">
+                    <div class="footer__info-title">База знаний</div>
+                    <div class="footer__info-item">Лечени наркомании</div>
+                    <div class="footer__info-item">Лечени алкоголизма</div>
+                    <div class="footer__info-item">Другие виды зависимости</div>
+                </div>
+                <div class="footer__info-column">
+                    <div class="footer__info-title">Контакты</div>
+                    <div class="footer__info-item">8 800 565 12 34</div>
+                    <div class="footer__info-item">mail@detox.ru</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
 </body>
 </html>

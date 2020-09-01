@@ -11,6 +11,7 @@ const cleanCSS = require('gulp-clean-css');
 const gulpEmpty = require('gulp-empty');
 const imagemin = require('gulp-imagemin');
 const ttf2woff = require('gulp-ttf2woff');
+const ghPages = require('gulp-gh-pages');
 
 const production = argv.production;
 
@@ -27,7 +28,7 @@ const path = {
     src: {
         html: [`${_src}/*.html`, `!${_src}/_*.html`],
         less: `${_src}/less/index.less`,
-        img: `${_src}/img/**/*.{svg, png}`,
+        img: `${_src}/img/**/*`,
         fonts: `${_src}/fonts/*.ttf`,
     },
     watch: {
@@ -37,6 +38,11 @@ const path = {
     },
     clean: `./${_dist}/`
 };
+
+/*gulp.task('deploy', () => src(`${_dist}/!**!/!*`).pipe(ghPages({
+    remoteUrl: 'https://github.com/lafferty0550/detoxication.git',
+    branch: 'gh-pages'
+})));*/
 
 const browserSync = () => {
     browsersync.init({

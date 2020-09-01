@@ -2,8 +2,14 @@
 @import './fonts';
 @import './vars';
 
-@import './logo';
 @import './header';
+@import './header-section';
+@import './list';
+@import './pagination';
+@import './about-block';
+@import './price-block';
+@import './detox-info';
+@import './footer';
 
 * {
   box-sizing: border-box;
@@ -12,67 +18,86 @@
 html, body {
   margin: 0;
   padding: 0;
-  .font(@family: "futura", @size: 10px, @weight: 500);
+  overflow-x: hidden;
+  .font(@family: "Futura PT", @size: 10px, @weight: 500);
 
-  @media (max-width: 1919px) {
+  @media (max-width: 1750px) {
     font-size: 9px;
   }
-
-  @media (max-width: 1620px) {
+  @media (max-width: 1580px) {
     font-size: 8px;
   }
-
-  @media (max-width: 1440px) {
+  @media (max-width: 1380px) {
     font-size: 7px;
   }
-
-  @media (max-width: 1280px) {
+  @media (max-width: 1200px) {
     font-size: 6px;
   }
-
-  @media (max-width: 1024px) {
+  @media (max-width: 1050px) {
     font-size: 5px;
   }
-
-  @media (max-width: 768px) {
-    font-size: 10px;
-  }
-
-  @media (max-width: 713px) {
-    font-size: 9px;
-  }
-
-  @media (max-width: 676px) {
-    font-size: 8px;
-  }
-
-  @media (max-width: 636px) {
-    font-size: 7px;
-  }
-
-  @media (max-width: 487px) {
-    font-size: 6px;
-  }
-
-  @media (max-width: 414px) {
-    font-size: 5px;
-  }
-
-  @media (max-width: 334px) {
+  @media (max-width: 900px) {
     font-size: 4px;
   }
-
-  @media (max-width: 300px) {
-    font-size: 3px;
+  @media @mobile {
+    font-size: 13px;
   }
 }
 
+body {
+  background: #fbfbfb url(./../img/background.svg) no-repeat top left -500px;
+}
+
 ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+.container {
+  width: 69%;
+  margin: 0 auto;
+
+  @media @mobile {
+    width: 90%;
+    height: auto;
+  }
+
+  > .about-block {
+    margin-top: 22.5rem;
+  }
+
+  > .price-block {
+    margin-top: 27.6rem;
+  }
+
+  > .detox-info {
+    margin-top: 22.6rem;
+  }
+}
+
+.btn-green {
+  display: inline-block;
+  background-color: @var-third-color;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.8em 3.8rem;
+  border-radius: 1.6em;
+
+
+
+  @media @mobile {
+    padding: 2.5rem 5rem;
+    border-radius: 5rem;
+  }
+}
+
+.choice {
+  font-size: 2.2rem;
+  background-color: white;
+  color: @var-third-color;
 }

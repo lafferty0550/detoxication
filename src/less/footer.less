@@ -1,0 +1,77 @@
+.footer {
+  width: 100%;
+  height: 70rem;
+  margin-top: 24rem;
+  background: url(../img/footer.svg) no-repeat left top;
+  background-size: cover;
+
+  > .container {
+    padding-top: 30rem;
+  }
+  .font(@family: "Futura PT Book", 2rem);
+
+  &__request {
+    .flex(@justify: space-between, @align: center);
+    width: 100%;
+    color: white;
+
+    &-text {
+      > div:first-child {
+        .font(@family: "Futura PT", @size: 3.1rem, @weight: 900);
+      }
+
+      > div:nth-child(2) {
+        margin-top: 0.9rem;
+        color: #938ebc;
+      }
+    }
+
+    &-social {
+      .flex();
+      > div {
+        &:not(:first-child) {
+          margin-left: 3.8rem;
+        }
+        padding: 1rem;
+        background-color: #34305a;
+        border-radius: 50%;
+        > img {
+          width: 2.6rem;
+        }
+      }
+    }
+  }
+
+  &__info {
+    .flex(@justify: space-between);
+    margin-top: 9rem;
+
+    &-column {
+      .flex(@direction: column);
+      width: fit-content;
+      max-width: 25rem;
+    }
+
+    &-title {
+      .font(@size: 2.3rem, @weight: 900);
+      color: white;
+      padding-bottom: 1rem;
+
+      &:first-child {
+        .flex(@align: center);
+        > span {
+          margin-left: 2rem;
+        }
+      }
+    }
+
+    &-item {
+      .font(@size: 2rem);
+      color: #938ebc;
+
+      &:not(:first-child) {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

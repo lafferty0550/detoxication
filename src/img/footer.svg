@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1922 712" width="1922" height="712">
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="1041.452" y1="-36.888" x2="1041.452" y2="911.557">
+			<stop offset="0" stop-color="#302a57"  />
+			<stop offset="1" stop-color="#2a254b"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+		.shp1 { fill: #aba6cc } 
+		.shp2 { fill: url(#grd1) } 
+		.shp3 { opacity: 0.231;fill: none;stroke: #7972a5;stroke-linecap:round;stroke-width: 2 } 
+	</style>
+	<g id="подвал">
+		<path id="Прямоугольник 2" class="shp0" d="M-2 0L1922 0L1922 712L-2 712L-2 0Z" />
+		<path id="Фигура 15" class="shp1" d="M886 127.56C886 127.56 1611.69 350.49 1931 2.56C2280.07 -377.79 1960 200.56 1960 200.56L1107 424.56L886 127.56Z" />
+		<path id="Фигура 14" class="shp2" d="M-1 159.56C-1 159.56 249.44 49.56 500 49.56C750.56 49.56 1075.19 230.56 1461 230.56C1929.82 230.56 2053.69 -112.95 2079 -21.44C2104.31 70.07 2024 911.56 2024 911.56L0 911.56L-1 159.56Z" />
+		<path id="Фигура 14 копия" class="shp3" d="M-9.35 135.66C-9.35 135.66 248.88 33.98 503.64 42.31C758.41 50.64 1082.56 242.43 1474.84 255.25C1951.52 270.84 2088.7 -68.55 2111.44 23.8C2134.19 116.15 2025.02 954.96 2025.02 954.96L-32.92 887.68L-9.35 135.66Z" />
+	</g>
+</svg>

@@ -1,0 +1,31 @@
+.pagination {
+  .flex(@align: center);
+  .font(@size: 2rem);
+
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+
+  &__left-arrow,
+  &__right-arrow {
+    .flex(@justify: center, @align: center);
+
+    padding: 1rem 1rem;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px 5px #f1eff8;
+
+    > img {
+      width: 2.8rem;
+    }
+  }
+
+  &__nums {
+    .flex();
+    margin: 0 5.5rem;
+  }
+
+  &__num {
+    margin: 0 0.5rem;
+  }
+}

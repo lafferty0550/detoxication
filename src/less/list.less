@@ -1,0 +1,96 @@
+.list {
+  &__header {
+    display: grid;
+    grid-template-areas:
+      "subtitle choice"
+      "title    choice";
+    .font(@family: "Futura PT");
+  }
+
+  &__subtitle {
+    grid-area: subtitle;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    grid-area: title;
+    margin-top: 0.6rem;
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+  }
+
+  &__choice {
+    grid-area: choice;
+    justify-self: end;
+    align-self: center;
+    margin-right: 12rem;
+  }
+
+  &__map {
+    margin-top: 5rem;
+    width: 100%;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 7rem 3rem;
+
+    margin-top: 3rem;
+  }
+
+  &__item {
+    position: relative;
+
+    > img {
+      width: 100%;
+    }
+
+    &-type {
+      .font(@size: 1.7rem);
+      .flex(@justify: center, @align: center);
+
+      position: absolute;
+      background-color: @var-third-color;
+      top: 1.7rem;
+      right: 1.4rem;
+      color: white;
+      padding: 0.9rem 0;
+      border-radius: 2em;
+      width: 12.5rem;
+
+      > span {
+        margin-left: 1rem;
+      }
+
+      > img {
+        width: 1.5rem;
+      }
+    }
+
+    &-inner {
+      margin: 3rem 0 0 1.2rem;
+    }
+
+    &-city {
+      .font(@size: 2.4rem, @weight: 900);
+    }
+
+    &-address {
+      .font(@family: "Futura PT Book", @size: 1.8rem);
+
+      margin-top: 0.4rem;
+    }
+
+    &-price {
+      .font(@size: 1.8rem);
+      margin-top: 1rem;
+    }
+  }
+
+  &__pagination {
+    margin-top: 9rem;
+  }
+}

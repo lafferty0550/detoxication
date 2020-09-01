@@ -1,0 +1,36 @@
+.about-block {
+  .flex(@align: center, @justify: space-between);
+
+  > img {
+    width: 70rem;
+  }
+
+  &__info {
+    width: 55rem;
+    padding-left: 3.6em;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 4rem;
+    letter-spacing: 0;
+    line-height: 1.1em;
+    margin-top: 2rem;
+  }
+
+  &__description {
+    .font(@family: "Futura PT Book", @size: 1.9rem);
+    margin-top: 2rem;
+    line-height: 1.3em;
+  }
+
+  &__btn {
+    margin-top: 4.5rem;
+    font-size: 1.9rem;
+  }
+}

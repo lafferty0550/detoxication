@@ -1,194 +1,217 @@
-@var-header-height-padding: 1.3rem;
-@var-header-width-padding: 7%;
-@var-header-height: 12rem;
+@mob-top-padding: 1.8rem;
 
-@var-icon-size: 6rem;
+@header-font-size: 2.2rem;
 
-#checkbox-menu {
+#checkbox-menu, #logo-white-icon, #menu-white-icon, #menu-common-icon, #phone-icon {
   display: none;
 }
 
-header {
+#menu-common-icon, #phone-icon {
+  width: 2em;
+}
+
+#menu-white-icon {
+  width: 1.8em;
+}
+
+@media @mobile {
+  #menu-common-icon, #phone-icon {
+    display: block;
+  }
+}
+
+.logo {
+  .flex(@align: center);
+  max-width: 14.5em;
+
+  > img {
+    .size(2.5em, 2.5em);
+  }
+
+  &__inner {
+    margin-left: .8em;
+  }
+
+  &__title {
+    .font(@family: 'Comfortaa', @size: 1.3em, @weight: 700);
+  }
+
+  &__subtitle {
+    .font(@family: "Futura PT Book", @size: .83em, @weight: 300);
+    line-height: 1em;
+    margin-top: .2em;
+    @media @mobile {
+      display: none;
+    }
+  }
+}
+
+.header {
   .flex(@justify: space-between, @align: center);
-  .font(@size: 1.7rem);
+  .font(@size: @header-font-size, @weight: 500);
   position: relative;
-  padding: @var-header-height-padding @var-header-width-padding;
-  color: @var-primary-dark-color;
-  height: @var-header-height;
+  padding: 1.1em 6.9%;
+  color: @var-primary-color;
+
+  a {
+    color: @var-primary-color;
+  }
+
+  @media @mobile {
+    padding: @mob-top-padding 2.5rem;
+  }
+
+  > label {
+    @media @mobile {
+      .flex();
+    }
+  }
 
   > nav {
-    .size(100%);
-    margin: 0 3%;
+    width: 100%;
+    padding: 0 1.7em 0 1.9em;
 
-    @media (max-width: 768px) {
-      width: fit-content;
-      order: -1;
-      margin: 0;
+    @media @mobile {
+      display: none;
+      padding: 0 5%;
     }
+  }
 
-    ul {
-      .flex(@justify: space-between, @align: center);
+  &__items {
+    .flex(@justify: space-between, @align: center);
+    height: 100%;
 
-      height: 100%;
-
-      @media (max-width: 768px) {
+    > li {
+      &:first-child {
         display: none;
+        position: relative;
+        margin-top: 1em;
+
+        > img {
+          position: absolute;
+          top: .6em;
+          left: 1em;
+          width: 1.4em;
+        }
+
+        > input {
+          .font(@family: "Futura PT Book");
+          background: #5f5988 url(../img/search-white.svg) no-repeat left 1em center;
+          background-size: 1.4em;
+          outline: none;
+          border: none;
+          color: white;
+          padding: .6em 3.1em;
+          border-radius: 2em;
+          width: 100%;
+
+          &:focus {
+            padding-left: 2em;
+            padding-right: 2em;
+            background-image: none;
+            &::placeholder {
+              visibility: hidden;
+              color: #a5a2bc;
+            }
+          }
+        }
       }
 
-      > li {
-        // Поисковая строка
-        &:first-child {
-          display: none;
+      &:nth-child(5) {
+        margin-right: 6.9em;
+      }
 
-          > input {
-            color: white;
-            border-radius: 2rem;
-            outline: none;
-            border: none;
-            width: 100%;
-            height: @var-header-height - 4rem;
-            background-color: @var-secondary-light-color;
-            padding: 0 2.5rem;
-            .font(@family: "Futura PT", @size: 3.5rem);
-          }
+      &:last-child {
+        .flex(@align: center);
 
-          @media (max-width: 768px) {
-            display: block;
-          }
+        > img {
+          width: 1.3em;
         }
 
-        // Публикации
-        &:nth-child(6) {
-          @media (min-width: 768px) {
-            margin-left: 11.5%;
-          }
-        }
-
-        // Поиск
-        &:last-child > a {
-          .flex(@align: center);
-
-          > svg {
-            .size(2.5rem, 2.7rem);
-          }
-
-          > span {
-            margin-left: 1.5rem;
-          }
-        }
-
-        > a {
-          color: @var-primary-dark-color;
+        > span {
+          margin-left: 2rem;
         }
       }
     }
   }
 
-  .contacts {
-    .flex(@direction: column, @align: center, @justify: center);
-
+  &__contacts {
     white-space: nowrap;
-    @media (max-width: 768px) {
+    line-height: 1em;
+
+    @media @mobile {
       display: none;
     }
 
-    &__phone {
-      .font(@family: "Futura PT", @size: 2.2rem, @weight: 700);
+    &-number {
+      .font(@size: 1em, @weight: 900);
+      letter-spacing: 0;
     }
 
-    &__note {
-      .font(@family: "Futura PT Book", @size: 1.7rem);
+    &-description {
+      .font(@family: "Futura PT Book", @size: 1.8rem);
     }
-  }
-
-  /**
-      appear in mobile version
-   */
-
-  #logo-white,
-  #close-icon,
-  #menu-icon,
-  #phone-icon {
-    display: none;
-  }
-
-  #menu-icon,
-  #phone-icon {
-    .size(@var-icon-size);
-    @media (max-width: 768px) {
-      display: block;
-    }
-  }
-
-  #close-icon {
-    .size(@var-icon-size - 2rem);
-    fill: white;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
   }
 }
 
 #checkbox-menu:checked + header {
-  background-color: @var-secondary-color;
-  justify-content: flex-start;
-  font-size: 3rem;
+  .flex(@justify: center);
+  background-color: #302a56;
+  color: white;
 
-  #menu-icon,
-  #phone-icon,
-  #logo {
+  #logo-common-icon, #menu-common-icon, #phone-icon {
     display: none;
   }
 
-  #logo-white,
-  #close-icon {
+  #logo-white-icon, #menu-white-icon {
     display: block;
   }
 
-  .logo {
-    margin: 0 auto;
-
-    &__title {
-      color: white;
-    }
+  #menu-white-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -.4em;
+    margin: auto 0 auto 4rem;
   }
 
-  ul {
-    .flex(@direction: column, @align: center);
-
+  > nav {
+    .font(@family: "Futura PT Book", @weight: 400);
+    display: block;
     position: absolute;
+    background-color: #302a56;
+    top: (@mob-top-padding * 2 + 2.5 * @header-font-size); // padding-top + padding-bottom + 2.5em (height of logo)
     left: 0;
-    top: @var-header-height;
-    margin: 0;
-    padding: 0;
+  }
 
-    background-color: @var-secondary-color;
-    width: 100%;
-    height: fit-content;
+  .header__items {
+    .flex(@direction: column);
+    .font(@size: 1.4em);
+    margin-top: .6em;
 
     > li {
       width: 100%;
-      line-height: 8rem;
-      padding: 0 @var-header-width-padding;
+      letter-spacing: 1px;
 
-      & > input {
+      &:first-child {
         display: block;
       }
 
-      & > a {
-        color: white;
-      }
-
-      // Клиники
       &:nth-child(2) {
-        margin-top: 5rem;
+        margin-top: 1.2em;
       }
 
-      // Блок контактов
       &:last-child {
         display: none;
       }
+    }
+
+    a {
+      color: white;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: .7em 0;
     }
   }
 }
