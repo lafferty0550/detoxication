@@ -39,10 +39,10 @@ const path = {
     clean: `./${_dist}/`
 };
 
-/*gulp.task('deploy', () => src(`${_dist}/!**!/!*`).pipe(ghPages({
+gulp.task('deploy', () => src(`${_dist}/**/*`).pipe(ghPages({
     remoteUrl: 'https://github.com/lafferty0550/detoxication.git',
     branch: 'gh-pages'
-})));*/
+})));
 
 const browserSync = () => {
     browsersync.init({
