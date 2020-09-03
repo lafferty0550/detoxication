@@ -42,10 +42,31 @@ html, body {
   @media @mobile {
     font-size: 13px;
   }
+  @media (max-width: 712.5px) {
+    font-size: 12px;
+  }
+  @media (max-width: 637.5px) {
+    font-size: 11px;
+  }
+  @media (max-width: 562.5px) {
+    font-size: 10px;
+  }
+  @media (max-width: 525px) {
+    font-size: 9px;
+  }
+  @media (max-width: 450px) {
+    font-size: 8px;
+  }
+  @media (max-width: 412.5px) {
+    font-size: 7px;
+  }
+  @media (max-width: 375px) {
+    font-size: 6px;
+  }
 }
 
 body {
-  background: #fbfbfb url(./../img/background.svg) no-repeat top left -500px;
+  background: #fbfbfb/* url(./../img/background.svg) no-repeat top left -500px*/;
 }
 
 ul {
@@ -63,41 +84,93 @@ a {
   margin: 0 auto;
 
   @media @mobile {
-    width: 90%;
+    width: 91.5%;
     height: auto;
   }
 
   > .about-block {
-    margin-top: 22.5rem;
+    margin-top: 22.9rem;
+
+    @media @mobile {
+      margin-top: 22rem;
+    }
   }
 
   > .price-block {
-    margin-top: 27.6rem;
+    margin-top: 27.4rem;
+
+    @media @mobile {
+      margin-top: 36rem;
+    }
   }
 
   > .detox-info {
     margin-top: 22.6rem;
+
+    @media @mobile {
+      margin-top: 21.5rem;
+    }
   }
 }
 
 .btn-green {
-  display: inline-block;
+  .flex(@align: center);
+  width: fit-content;
+  font-size: 1.7rem;
   background-color: @var-third-color;
   color: white;
   text-transform: uppercase;
-  padding: 0.8em 3.8rem;
+  padding: 0.9em 1.3rem 0.9em 2.2rem;
   border-radius: 1.6em;
 
-
+  &__arrow {
+    .flex(@justify: center, @align: center);
+    .size(1.9em, 1.9em);
+    margin-left: 1.5em;
+    background-color: white;
+    color: @var-third-color;
+    border-radius: 50%;
+  }
 
   @media @mobile {
-    padding: 2.5rem 5rem;
-    border-radius: 5rem;
+    border-radius: 2em;
   }
 }
 
 .choice {
-  font-size: 2.2rem;
+  .flex(@align: center);
   background-color: white;
-  color: @var-third-color;
+  border-radius: 4em;
+  padding: 2em 2.2em 2em 3em;
+
+  @media @mobile {
+    padding: 1.8em 2.2em 2em 2.6em;
+  }
+
+  > img:first-child {
+    width: 2.6em;
+    margin-right: 1.6em;
+    @media @mobile {
+      width: 3em;
+    }
+  }
+
+  > img:last-child {
+    width: 2em;
+
+    @media @mobile {
+      display: none;
+    }
+  }
+
+  > span {
+    font-size: 2.2em;
+    background-color: white;
+    color: @var-third-color;
+    margin-right: 3.6em;
+
+    @media @mobile {
+      font-size: 2.9em;
+    }
+  }
 }

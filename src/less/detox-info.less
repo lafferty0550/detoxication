@@ -2,9 +2,18 @@
   width: 81%;
   margin: 0 auto;
 
+  @media @mobile {
+    width: 100%;
+  }
+
   &__title {
     .font(@size: 4.3rem, @weight: 500);
     letter-spacing: 1px;
+
+    @media @mobile {
+      .font(@size: 4.7rem);
+      line-height: 1.1em;
+    }
   }
 
   &__text {
@@ -13,20 +22,38 @@
     line-height: 1.2em;
     overflow: hidden;
     margin-top: 1rem;
+
+    @media @mobile {
+      .font(@size: 2.54rem);
+      line-height: 1.33em;
+      margin-top: 1.4rem;
+    }
   }
 
   &__subtitle {
     .font(@family: "Futura", @size: 2.3rem, @weight: 900);
     padding-top: 3.5rem;
     letter-spacing: 1px;
+
+    @media @mobile {
+      .font(@size: 3.3rem);
+      padding-top: 6rem;
+    }
   }
 
   ul {
-    list-style: circle;
+    .font(@family: "Futura PT Book", @size: 2rem, @weight: 300);
+    list-style: disc;
     letter-spacing: -1px;
     margin-left: 1.8rem;
     margin-top: 0.9em;
-    .font(@family: "Futura PT Book", @size: 2rem, @weight: 300);
+
+    @media @mobile {
+      .font(@size: 2.5rem);
+      margin-top: 1.2em;
+      margin-left: 2.5rem;
+      line-height: 1.54em;
+    }
 
     > li {
       letter-spacing: 0;

@@ -6,7 +6,5 @@
     <style>
         tspan { white-space:pre }
     </style>
-    <g id="лого">
-        <use id="Group 10" href="#img1" transform="matrix(0.177,0,0,0.177,0,0)"/>
-    </g>
+    <use id="Group 10" href="#img1" transform="matrix(0.177,0,0,0.177,0,0)"/>
 </svg>

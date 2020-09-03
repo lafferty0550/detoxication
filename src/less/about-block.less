@@ -1,18 +1,37 @@
 .about-block {
   .flex(@align: center, @justify: space-between);
 
+  @media @mobile {
+    flex-direction: column;
+  }
+
   > img {
     width: 70rem;
+
+    @media @mobile {
+      width: 100%;
+    }
   }
 
   &__info {
     width: 55rem;
     padding-left: 3.6em;
+
+    @media @mobile {
+      width: 100%;
+      padding: 0;
+      margin-top: 10.5em;
+    }
   }
 
   &__subtitle {
     text-transform: uppercase;
     font-size: 1.6rem;
+
+    @media @mobile {
+      font-size: 2rem;
+      letter-spacing: -1px;
+    }
   }
 
   &__title {
@@ -21,12 +40,23 @@
     letter-spacing: 0;
     line-height: 1.1em;
     margin-top: 2rem;
+
+    @media @mobile {
+      font-size: 4.6rem;
+      margin-top: 1.7rem;
+    }
   }
 
   &__description {
     .font(@family: "Futura PT Book", @size: 1.9rem);
     margin-top: 2rem;
     line-height: 1.3em;
+
+    @media @mobile {
+      margin-top: 2.5rem;
+      font-size: 2.35rem;
+      line-height: 1.2em;
+    }
   }
 
   &__btn {

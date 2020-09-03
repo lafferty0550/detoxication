@@ -1,24 +1,52 @@
 .footer {
+  .font(@family: "Futura PT Book", 2rem);
   width: 100%;
   height: 70rem;
   margin-top: 24rem;
+  padding-top: 31rem;
   background: url(../img/footer.svg) no-repeat left top;
   background-size: cover;
-  position: relative;
+
+  @media @mobile {
+    height: fit-content;
+  }
 
   > .container {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 8.8rem;
-    margin: 0 auto;
+    .flex(@direction: column);
   }
-  .font(@family: "Futura PT Book", 2rem);
+
+  &__logo {
+    display: none;
+    color: white;
+    .font(@size: 2.7rem);
+    width: 35rem;
+
+    & .logo__subtitle {
+      display: block;
+    }
+
+    @media @mobile {
+      .flex(@align: center);
+    }
+  }
+
+  @media @mobile {
+    background: url(../img/mob-footer.svg) no-repeat right top;
+    background-size: cover;
+    margin-top: 15rem;
+    padding-top: 9rem;
+  }
 
   &__request {
     .flex(@justify: space-between, @align: center);
     width: 100%;
     color: white;
+
+    @media @mobile {
+      .flex(@direction: column);
+      order: 2;
+      margin-top: 2rem;
+    }
 
     &-text {
       > div:first-child {
@@ -28,28 +56,83 @@
       > div:nth-child(2) {
         margin-top: 0.9rem;
         color: #938ebc;
+
+        @media @mobile {
+          margin-top: 0.3rem;
+          .font(@size: 2.6rem);
+
+        }
+      }
+
+      @media @mobile {
+        margin-top: 4.5rem;
       }
     }
 
     &-social {
       .flex();
+
+      @media @mobile {
+        order: -1;
+      }
+
       > div {
+        .flex(@justify: center, @align: center);
         &:not(:first-child) {
           margin-left: 3.8rem;
         }
+
         padding: 1rem;
         background-color: #34305a;
         border-radius: 50%;
+
         > img {
           width: 2.6rem;
+
+          @media @mobile {
+            width: 4.3rem;
+          }
         }
+
+        @media @mobile {
+          padding: 2.5rem;
+        }
+      }
+    }
+
+    &-btn {
+      @media @mobile {
+        margin-top: 2.3rem;
+        .font(@size: 2.2rem);
+        margin-bottom: 10rem;
       }
     }
   }
 
   &__info {
+    width: 100%;
     .flex(@justify: space-between);
     margin-top: 9rem;
+
+    @media @mobile {
+      margin-top: 6.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 4rem;
+
+      &-column {
+        width: 100%;
+
+        &:first-child {
+          display: none;
+        }
+
+        &:nth-child(2n+1) {
+          width: 55%;
+          justify-self: end;
+        }
+      }
+    }
 
     &-column {
       .flex(@direction: column);
@@ -62,8 +145,13 @@
       color: white;
       padding-bottom: 1rem;
 
+      @media @mobile {
+        .font(@size: 3.2rem);
+      }
+
       &:first-child {
         .flex(@align: center);
+
         > span {
           margin-left: 2rem;
         }
@@ -76,6 +164,11 @@
 
       &:not(:first-child) {
         margin-top: 1rem;
+      }
+
+      @media @mobile {
+        .font(@size: 2.5rem);
+        line-height: 1.5em;
       }
     }
   }

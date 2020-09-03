@@ -1,10 +1,31 @@
+.mob-clinic {
+  display: none;
+}
+
+@media @mobile {
+  .mob-clinic {
+    display: block;
+  }
+  .clinic {
+    display: none;
+  }
+}
+
 .list {
+  @media @mobile {
+    margin-top: 10.5rem;
+  }
+
   &__header {
+    .font(@family: "Futura PT");
     display: grid;
     grid-template-areas:
-      "subtitle choice"
-      "title    choice";
-    .font(@family: "Futura PT");
+  "subtitle choice"
+  "title    choice";
+
+    @media @mobile {
+      .flex(@direction: column);
+    }
   }
 
   &__subtitle {
@@ -19,18 +40,43 @@
     font-size: 5rem;
     font-weight: 600;
     letter-spacing: -1px;
+    @media @mobile {
+      .font(@size: 4.6rem);
+      letter-spacing: 1px;
+    }
   }
 
   &__choice {
     grid-area: choice;
     justify-self: end;
     align-self: center;
-    margin-right: 12rem;
+
+
+    @media @mobile {
+      margin-right: 0;
+      margin-top: 4.5rem;
+      align-self: start;
+      width: 100%;
+    }
   }
 
   &__map {
     margin-top: 5rem;
     width: 100%;
+
+    &-little {
+      display: none;
+    }
+
+    @media @mobile {
+      display: none;
+
+      &-little {
+        width: 100%;
+        display: block;
+        margin-top: 5.4rem;
+      }
+    }
   }
 
   &__items {
@@ -39,10 +85,19 @@
     grid-gap: 7rem 3rem;
 
     margin-top: 3rem;
+
+    @media @mobile {
+      .flex(@direction: column);
+      margin-top: 6.5rem;
+    }
   }
 
   &__item {
     position: relative;
+
+    @media @mobile {
+      width: 100%;
+    }
 
     > img {
       width: 100%;
@@ -61,12 +116,25 @@
       border-radius: 2em;
       width: 12.5rem;
 
+      @media @mobile {
+        width: 20rem;
+        .font(@size: 2.4rem);
+      }
+
       > span {
         margin-left: 1rem;
+
+        @media @mobile {
+          margin-left: 2rem;
+        }
       }
 
       > img {
         width: 1.5rem;
+
+        @media @mobile {
+          width: 2rem;
+        }
       }
     }
 
@@ -76,21 +144,37 @@
 
     &-city {
       .font(@size: 2.4rem, @weight: 900);
+
+      @media @mobile {
+        .font(@size: 3rem, @weight: 900);
+      }
     }
 
     &-address {
       .font(@family: "Futura PT Book", @size: 1.8rem);
 
       margin-top: 0.4rem;
+
+      @media @mobile {
+        .font(@size: 3rem);
+      }
     }
 
     &-price {
       .font(@size: 1.8rem);
       margin-top: 1rem;
+
+      @media @mobile {
+        .font(@size: 3rem);
+      }
     }
   }
 
   &__pagination {
     margin-top: 9rem;
+
+    @media @mobile {
+      display: none;
+    }
   }
 }

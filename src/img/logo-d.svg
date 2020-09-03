@@ -1,13 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 31" width="23" height="31">
-	<defs>
-		<image width="201" height="274" id="img1" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAxIiBoZWlnaHQ9IjI3NCIgdmlld0JveD0iMCAwIDIwMSAyNzQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTAwLjUgMjc0QzE1Ni4wMDUgMjc0IDIwMSAyMjkuMDA1IDIwMSAxNzMuNUMyMDEgMTE3Ljk5NSAxMDAuNSAwIDEwMC41IDBDMTAwLjUgMCAwIDExNy45OTUgMCAxNzMuNUMwIDIyOS4wMDUgNDQuOTk1NCAyNzQgMTAwLjUgMjc0Wk0xMDAuNSAyMTVDMTI3LjgzOCAyMTUgMTUwIDE5Mi45OTUgMTUwIDE2NS44NUMxNTAgMTM4LjcwNiAxMDAuNSA4MSAxMDAuNSA4MUMxMDAuNSA4MSA1MSAxMzguNzA2IDUxIDE2NS44NUM1MSAxOTIuOTk1IDczLjE2MTkgMjE1IDEwMC41IDIxNVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo="/>
-	</defs>
-	<style>
-		tspan { white-space:pre }
-	</style>
-	<g id="подвал">
-		<g id="лого копия">
-			<use id="logo-d" href="#img1" transform="matrix(0.114,0,0,0.113,0,0)"/>
-		</g>
-	</g>
+    <defs>
+        <image width="201" height="274" id="img1"
+               href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAxIiBoZWlnaHQ9IjI3NCIgdmlld0JveD0iMCAwIDIwMSAyNzQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTAwLjUgMjc0QzE1Ni4wMDUgMjc0IDIwMSAyMjkuMDA1IDIwMSAxNzMuNUMyMDEgMTE3Ljk5NSAxMDAuNSAwIDEwMC41IDBDMTAwLjUgMCAwIDExNy45OTUgMCAxNzMuNUMwIDIyOS4wMDUgNDQuOTk1NCAyNzQgMTAwLjUgMjc0Wk0xMDAuNSAyMTVDMTI3LjgzOCAyMTUgMTUwIDE5Mi45OTUgMTUwIDE2NS44NUMxNTAgMTM4LjcwNiAxMDAuNSA4MSAxMDAuNSA4MUMxMDAuNSA4MSA1MSAxMzguNzA2IDUxIDE2NS44NUM1MSAxOTIuOTk1IDczLjE2MTkgMjE1IDEwMC41IDIxNVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo="/>
+    </defs>
+    <style>
+        tspan { white-space:pre }
+    </style>
+    <use id="logo-d" href="#img1" transform="matrix(0.114,0,0,0.113,0,0)"/>
 </svg>

@@ -4,10 +4,21 @@
   &__subtitle {
     .font(@size: 1.8rem);
     text-transform: uppercase;
+
+    @media @mobile {
+      .font(@size: 1.9rem);
+      letter-spacing: 0.5px;
+    }
   }
 
   &__title {
     .font(@size: 5.6rem);
+
+    @media @mobile {
+      .font(@size: 4.4rem);
+      letter-spacing: 2px;
+      margin-top: 0.1em;
+    }
   }
 
   &__cards {
@@ -15,6 +26,12 @@
 
     position: relative;
     margin-top: 6rem;
+
+    @media @mobile {
+      .flex(@direction: column);
+      width: 100%;
+      margin-top: 5rem;
+    }
   }
 
   &__card {
@@ -24,22 +41,44 @@
     text-align: center;
     border-radius: 2em;
     padding-top: 3.8em;
-
-    &:nth-child(2n+1) {
-      background-color: white;
-      width: 34rem;
-      height: 39rem;
-    }
+    background-color: white;
 
     &:nth-child(2) {
       color: white;
       background: url(../img/comfort.svg);
       background-size: cover;
-      padding-top: 7em;
+    }
+
+    @media @desktop {
+      &:nth-child(2n+1) {
+        background-color: white;
+        width: 34rem;
+        height: 39rem;
+      }
+
+      &:nth-child(2) {
+        padding-top: 6.6em;
+      }
+    }
+
+    @media @mobile {
+      .font(@size: 4rem);
+      border-radius: 4rem;
+      width: 100%;
+      height: fit-content;
+      padding: 3.5rem 2.8rem 4rem 2.8rem;
+      align-items: flex-start;
+
+      &:not(:first-child) {
+        margin-top: 4rem;
+      }
     }
 
     &-title {
-      .font(@size: 2.8rem);
+      .font(@size: 2.6rem);
+      @media @mobile {
+        .font(@size: 3.6rem);
+      }
     }
 
     &-price {
@@ -54,6 +93,13 @@
         display: block;
         padding-bottom: 1rem;
         margin-left: 1rem;
+        @media @mobile {
+          .font(@size: 4rem);
+        }
+      }
+
+      @media @mobile {
+        .font(@size: 6.5rem);
       }
     }
 
@@ -66,8 +112,19 @@
       .flex(@direction: column, @align: center);
       .font(@family: "Futura PT Book", @size: 2rem);
 
-      margin-top: 3.1rem;
+      margin-top: 1.4rem;
       line-height: 4rem;
+
+      @media @mobile {
+        .flex(@justify: space-between);
+        .font(@size: 2.6rem);
+        text-align: left;
+        line-height: 3.5rem;
+
+        > span {
+          width: 30%;
+        }
+      }
     }
   }
 }
